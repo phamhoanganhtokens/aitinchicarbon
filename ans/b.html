@@ -1,1 +1,452 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo cáo Phân tích Carbon - AI Tín Chỉ Carbon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            50: '#f2f5f8',
+                            100: '#e5ebf1',
+                            800: '#1a2b3c',
+                            900: '#0f1a24',
+                        },
+                        forest: {
+                            700: '#1b4332',
+                            800: '#081c15',
+                        },
+                        accent: {
+                            gold: '#b8926a',
+                            red: '#9b2226',
+                            green: '#2d6a4f'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Times New Roman"', 'serif'],
+                        display: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media print {
+            .no-print { display: none; }
+            body { background-color: white; }
+            .paper-container { box-shadow: none; border: none; }
+        }
+        body {
+            background-color: #f3f4f6;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+        .paper-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            background: white;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            padding: 3rem 4rem;
+        }
+        .report-text {
+            text-align: justify;
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: #1a2b3c;
+        }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #1a2b3c, transparent);
+            margin: 2rem 0;
+            opacity: 0.2;
+        }
+        .risk-high { background-color: #fee2e2; border-left: 4px solid #ef4444; }
+        .risk-medium { background-color: #fef3c7; border-left: 4px solid #f59e0b; }
+        .risk-low { background-color: #d1fae5; border-left: 4px solid #10b981; }
+        
+        .nav-link:hover { text-decoration: underline; color: #1b4332; }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: #1b4332;
+        }
+    </style>
+</head>
+<body class="font-sans">
 
+    <!-- Brand Header (Floating) -->
+    <div class="max-w-[1000px] mx-auto px-4 mt-6 flex justify-between items-center no-print">
+        <div class="flex items-center space-x-2">
+            <div class="w-10 h-10 bg-forest-700 flex items-center justify-center rounded">
+                <span class="text-white font-bold text-xl italic">AI</span>
+            </div>
+            <div>
+                <p class="font-bold text-navy-800 text-sm uppercase tracking-wider">AI Tín Chỉ Carbon</p>
+                <p class="text-xs text-gray-500">www.phamhoanganhtokens.com</p>
+            </div>
+        </div>
+        <button onclick="window.print()" class="bg-navy-800 text-white px-4 py-2 rounded text-sm font-medium hover:bg-navy-900 transition-colors">
+            Xuất Báo Cáo (PDF)
+        </button>
+    </div>
+
+    <!-- Main Report Page -->
+    <div class="paper-container relative overflow-hidden">
+        
+        <!-- Watermark/Badge -->
+        <div class="absolute top-12 right-12 border-2 border-accent-gold px-4 py-1 rotate-12 opacity-40">
+            <p class="text-accent-gold font-bold text-xs uppercase tracking-widest text-center">Tài Liệu Mật<br>Phân Tích Chuyên Gia</p>
+        </div>
+
+        <!-- Report Header -->
+        <header class="mb-12 border-b-2 border-navy-800 pb-8">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <p class="text-navy-800 font-semibold tracking-widest uppercase text-xs mb-2">Báo cáo Chiến lược 2025-2026</p>
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight max-w-2xl">
+                        BÁO CÁO PHÂN TÍCH TÍNH KHẢ THI DỰ ÁN CARBON XANH (BLUE CARBON) TẠI BÁN ĐẢO CÀ MAU
+                    </h1>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                <div>
+                    <p class="text-gray-500 uppercase text-[10px] font-bold">Ngày lập</p>
+                    <p class="font-semibold text-navy-800">22 tháng 5 năm 2026</p>
+                </div>
+                <div>
+                    <p class="text-gray-500 uppercase text-[10px] font-bold">Mã dự án</p>
+                    <p class="font-semibold text-navy-800">CM-BC-2026-001</p>
+                </div>
+                <div>
+                    <p class="text-gray-500 uppercase text-[10px] font-bold">Trạng thái</p>
+                    <p class="font-semibold text-accent-green">SẴN SÀNG TRIỂN KHAI</p>
+                </div>
+                <div>
+                    <p class="text-gray-500 uppercase text-[10px] font-bold">Địa điểm</p>
+                    <p class="font-semibold text-navy-800">Bán đảo Cà Mau, Việt Nam</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Table of Contents -->
+        <nav class="mb-12 bg-gray-50 p-6 rounded-lg border border-gray-200">
+            <h2 class="text-lg font-bold mb-4 flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path></svg>
+                Mục lục nội dung
+            </h2>
+            <ul class="grid md:grid-cols-2 gap-y-2 gap-x-8 text-sm font-medium text-navy-800">
+                <li><a href="#summary" class="nav-link">1. Tóm tắt và Giả định</a></li>
+                <li><a href="#analysis" class="nav-link">2. Phân tích Chi tiết từ 4 Chuyên gia</a></li>
+                <li><a href="#risks" class="nav-link">3. Đánh giá Rủi ro</a></li>
+                <li><a href="#financial" class="nav-link">4. Dự báo Tài chính và ESG</a></li>
+                <li><a href="#roadmap" class="nav-link">5. Lộ trình Triển khai</a></li>
+                <li><a href="#conclusion" class="nav-link">6. Kết luận và Kiến nghị</a></li>
+            </ul>
+        </nav>
+
+        <!-- Section 1: Summary -->
+        <section id="summary" class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 flex items-center border-l-4 border-navy-800 pl-4">
+                1. Tóm tắt và Giả định
+            </h2>
+            <div class="report-text mb-6">
+                Dự án tập trung vào việc phục hồi và bảo tồn <strong>3.000 ha rừng ngập mặn</strong> tại Bán đảo Cà Mau, kết hợp mô hình kinh tế dưới tán rừng (tôm sinh thái). Đây là khu vực trọng điểm trong chiến lược thích ứng biến đổi khí hậu của Việt Nam, nơi có tiềm năng lưu trữ Carbon cao gấp nhiều lần so với rừng trên cạn.
+            </div>
+            
+            <div class="bg-amber-50 border border-amber-200 p-6 rounded-lg">
+                <h3 class="text-sm font-bold text-amber-900 uppercase tracking-widest mb-4 flex items-center">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"></path></svg>
+                    Các giả định chính
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                    <div class="flex justify-between border-b border-amber-200 pb-2">
+                        <span class="text-amber-800">Diện tích:</span>
+                        <span class="font-bold">3.000 ha</span>
+                    </div>
+                    <div class="flex justify-between border-b border-amber-200 pb-2">
+                        <span class="text-amber-800">Hệ số hấp thụ:</span>
+                        <span class="font-bold">20 tCO2/ha/năm</span>
+                    </div>
+                    <div class="flex justify-between border-b border-amber-200 pb-2">
+                        <span class="text-amber-800">Tiêu chuẩn:</span>
+                        <span class="font-bold underline">Verra VM0033</span>
+                    </div>
+                    <div class="flex justify-between border-b border-amber-200 pb-2">
+                        <span class="text-amber-800">Giá tín chỉ kỳ vọng:</span>
+                        <span class="font-bold">$30 / tCO2</span>
+                    </div>
+                    <div class="flex justify-between border-b border-amber-200 pb-2">
+                        <span class="text-amber-800">Thời hạn:</span>
+                        <span class="font-bold">25 năm (2025-2050)</span>
+                    </div>
+                    <div class="flex justify-between border-b border-amber-200 pb-2">
+                        <span class="text-amber-800">Mô hình:</span>
+                        <span class="font-bold">Tôm - Rừng Sinh thái</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Agent Analysis Grid -->
+        <section id="analysis" class="mb-16">
+            <h2 class="text-2xl font-bold mb-8 flex items-center border-l-4 border-navy-800 pl-4">
+                2. Phân tích Chi tiết từ Bốn góc nhìn Chuyên gia
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Legal -->
+                <div class="p-6 bg-navy-50 rounded-xl border border-navy-100">
+                    <div class="flex items-center mb-4">
+                        <div class="p-2 bg-navy-800 rounded mr-3">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-navy-800">Góc nhìn Pháp lý</h3>
+                    </div>
+                    <ul class="text-sm space-y-3 report-text">
+                        <li>• <strong>Nghị định 91/2024/NĐ-CP:</strong> Hoàn toàn phù hợp với khung pháp lý mới nhất về hấp thụ carbon rừng.</li>
+                        <li>• <strong>Cơ chế quốc tế:</strong> Cần xin <em>Thư phê duyệt (LoA)</em> từ Cục Biến đổi khí hậu để tránh "tính trùng" (Double counting).</li>
+                        <li>• <strong>Sử dụng đất:</strong> Cần thống nhất quy hoạch giữa lâm nghiệp và thủy sản.</li>
+                    </ul>
+                </div>
+
+                <!-- Technical -->
+                <div class="p-6 bg-green-50 rounded-xl border border-green-100">
+                    <div class="flex items-center mb-4">
+                        <div class="p-2 bg-forest-700 rounded mr-3">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.628.285a2 2 0 01-1.963 0l-.628-.285a6 6 0 00-3.86-.517l-2.387.477a2 2 0 00-1.022.547V18a2 2 0 002 2h11a2 2 0 002-2v-2.572zM12 11V3m0 0L9 6m3-3l3 3"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-forest-700">Kỹ thuật & MRV</h3>
+                    </div>
+                    <ul class="text-sm space-y-3 report-text">
+                        <li>• <strong>Carbon đất (SOC):</strong> Chiếm 70-80% trữ lượng. Sử dụng lấy mẫu lõi 1m theo tiêu chuẩn ISO 17025.</li>
+                        <li>• <strong>Tính bổ sung:</strong> Đáp ứng rào cản tài chính do chi phí hạ tầng đê kè mềm cực lớn.</li>
+                        <li>• <strong>Công nghệ đo đạc:</strong> Kết hợp LiDAR và Ground-truthing để giữ sai số &lt; 10%.</li>
+                    </ul>
+                </div>
+
+                <!-- Economic -->
+                <div class="p-6 bg-blue-50 rounded-xl border border-blue-100">
+                    <div class="flex items-center mb-4">
+                        <div class="p-2 bg-blue-800 rounded mr-3">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-blue-900">Góc nhìn Kinh tế</h3>
+                    </div>
+                    <ul class="text-sm space-y-3 report-text">
+                        <li>• <strong>CAPEX:</strong> 370 tỷ VNĐ (~$15M) cho đê kè và trồng rừng.</li>
+                        <li>• <strong>Doanh thu:</strong> ~$1,8M/năm từ tín chỉ + ~$0,5M từ tôm sinh thái.</li>
+                        <li>• <strong>Hiệu quả:</strong> IRR có thể đạt 10-12% khi kết hợp các nguồn vốn xanh ưu đãi (Green Grants).</li>
+                    </ul>
+                </div>
+
+                <!-- AI Solution -->
+                <div class="p-6 bg-purple-50 rounded-xl border border-purple-100">
+                    <div class="flex items-center mb-4">
+                        <div class="p-2 bg-purple-800 rounded mr-3">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="font-bold text-purple-900">Giải pháp AI & Tech</h3>
+                    </div>
+                    <ul class="text-sm space-y-3 report-text">
+                        <li>• <strong>Digital Twin:</strong> Mô phỏng 3.000 ha rừng để dự báo khả năng hấp thụ theo thời tiết thực tế.</li>
+                        <li>• <strong>Sentinel-2 AI:</strong> Cập nhật độ che phủ mỗi 15 ngày, phát hiện xâm hại sớm.</li>
+                        <li>• <strong>Blockchain:</strong> "Hộ chiếu số" cho tôm sinh thái, tăng giá trị xuất khẩu EU/Mỹ.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Risk Assessment -->
+        <section id="risks" class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 flex items-center border-l-4 border-navy-800 pl-4">
+                3. Đánh giá Rủi ro
+            </h2>
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr class="bg-navy-800 text-white text-sm">
+                            <th class="p-4 text-left border border-navy-900">Loại rủi ro</th>
+                            <th class="p-4 text-left border border-navy-900">Mức độ</th>
+                            <th class="p-4 text-left border border-navy-900">Giải pháp Giảm thiểu</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <tr class="risk-high">
+                            <td class="p-4 font-bold border border-gray-200">Rủi ro Thiên tai (Bão, Xói mòn)</td>
+                            <td class="p-4 font-bold border border-gray-200">CAO</td>
+                            <td class="p-4 border border-gray-200">Sử dụng đê kè mềm (T-fence) và trồng rừng dải chắn sóng đa tầng.</td>
+                        </tr>
+                        <tr class="risk-medium">
+                            <td class="p-4 font-bold border border-gray-200">Biến động Chính sách (NDC)</td>
+                            <td class="p-4 font-bold border border-gray-200">TRUNG BÌNH</td>
+                            <td class="p-4 border border-gray-200">Duy trì tỷ lệ tín chỉ dự phòng (Buffer pool) 10-20% theo Verra.</td>
+                        </tr>
+                        <tr class="risk-low">
+                            <td class="p-4 font-bold border border-gray-200">Thị trường (Giá Carbon)</td>
+                            <td class="p-4 font-bold border border-gray-200">THẤP</td>
+                            <td class="p-4 border border-gray-200">Ký hợp đồng ERPA dài hạn với giá sàn cố định và cơ chế chia sẻ lợi nhuận.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 4: Financial & ESG -->
+        <section id="financial" class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 flex items-center border-l-4 border-navy-800 pl-4">
+                4. Dự báo Tài chính và Tác động ESG
+            </h2>
+            
+            <div class="mb-8 overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="bg-gray-100 border-b-2 border-navy-800">
+                            <th class="p-3 text-left">Kịch bản (25 năm)</th>
+                            <th class="p-3 text-right">Thận trọng ($20)</th>
+                            <th class="p-3 text-right bg-blue-50 text-blue-900 font-bold">Cơ sở ($30)</th>
+                            <th class="p-3 text-right">Lạc quan ($50)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr>
+                            <td class="p-3 font-medium">Tổng doanh thu Carbon (M USD)</td>
+                            <td class="p-3 text-right">45.0</td>
+                            <td class="p-3 text-right bg-blue-50">65.0</td>
+                            <td class="p-3 text-right">112.5</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 font-medium">Doanh thu tôm sinh thái (M USD)</td>
+                            <td class="p-3 text-right">10.0</td>
+                            <td class="p-3 text-right bg-blue-50">12.5</td>
+                            <td class="p-3 text-right">15.0</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 font-medium text-forest-700">Lợi ích cộng đồng (70% net)</td>
+                            <td class="p-3 text-right">~28M</td>
+                            <td class="p-3 text-right bg-blue-50 font-bold">~40M</td>
+                            <td class="p-3 text-right">~75M</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="border border-green-200 p-4 rounded bg-green-50">
+                    <p class="text-[10px] font-bold text-green-800 uppercase mb-1">Environmental (E)</p>
+                    <p class="text-xs report-text">Hấp thụ 1,5 triệu tấn tCO2e; bảo vệ đa dạng sinh học và chống xâm nhập mặn.</p>
+                </div>
+                <div class="border border-blue-200 p-4 rounded bg-blue-50">
+                    <p class="text-[10px] font-bold text-blue-800 uppercase mb-1">Social (S)</p>
+                    <p class="text-xs report-text">1.000 hộ dân có thu nhập bền vững; cải thiện hạ tầng cộng đồng ven biển.</p>
+                </div>
+                <div class="border border-gray-200 p-4 rounded bg-gray-50">
+                    <p class="text-[10px] font-bold text-gray-800 uppercase mb-1">Governance (G)</p>
+                    <p class="text-xs report-text">Minh bạch hóa 100% qua Blockchain & AI; tuân thủ báo cáo quốc tế.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Roadmap -->
+        <section id="roadmap" class="mb-16">
+            <h2 class="text-2xl font-bold mb-10 flex items-center border-l-4 border-navy-800 pl-4">
+                5. Lộ trình Triển khai
+            </h2>
+            <div class="ml-4 border-l-2 border-navy-100 pl-8 space-y-10">
+                <div class="relative timeline-item">
+                    <p class="text-xs font-bold text-accent-gold uppercase tracking-tighter">Giai đoạn 1: Q3/2025 - Q1/2026</p>
+                    <h3 class="font-bold text-navy-800">Khởi động & Đăng ký</h3>
+                    <p class="text-sm text-gray-600 mt-1">Lập FS, thiết kế PDD và nộp hồ sơ đăng ký Verra.</p>
+                </div>
+                <div class="relative timeline-item">
+                    <p class="text-xs font-bold text-accent-gold uppercase tracking-tighter">Giai đoạn 2: Q2/2026 - Q4/2026</p>
+                    <h3 class="font-bold text-navy-800">Thực thi Hạ tầng</h3>
+                    <p class="text-sm text-gray-600 mt-1">Lắp đặt đê kè mềm, trồng phục hồi 500 ha đầu tiên. Thiết lập AI Monitor.</p>
+                </div>
+                <div class="relative timeline-item">
+                    <p class="text-xs font-bold text-accent-gold uppercase tracking-tighter">Giai đoạn 3: 2027</p>
+                    <h3 class="font-bold text-navy-800">Thẩm định (Validation)</h3>
+                    <p class="text-sm text-gray-600 mt-1">Xác minh bởi bên thứ ba (DOE) và hoàn thiện quy trình đo đạc.</p>
+                </div>
+                <div class="relative timeline-item">
+                    <p class="text-xs font-bold text-accent-gold uppercase tracking-tighter">Giai đoạn 4: 2028 trở đi</p>
+                    <h3 class="font-bold text-navy-800">Vận hành & Thương mại</h3>
+                    <p class="text-sm text-gray-600 mt-1">Phát hành tín chỉ lần đầu và niêm yết trên các sàn giao dịch quốc tế.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Conclusion -->
+        <section id="conclusion" class="mb-8">
+            <div class="bg-navy-900 text-white p-8 rounded-lg shadow-xl">
+                <h2 class="text-2xl font-bold mb-4 flex items-center">
+                    <svg class="w-6 h-6 mr-3 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    6. Kết luận và Kiến nghị
+                </h2>
+                <div class="report-text text-gray-200 mb-6 text-base italic">
+                    Dự án "Liên minh Rừng ngập mặn Bán đảo Cà Mau" là dự án có tính khả thi cao về mặt kỹ thuật và tác động xã hội. Giá trị chiến lược về ESG và tiềm năng tăng giá của "Blue Carbon" khiến đây là một tài sản xanh cực kỳ giá trị cho các nhà đầu tư tổ chức.
+                </div>
+                <div class="bg-white/10 p-6 rounded-lg">
+                    <h4 class="text-accent-gold font-bold text-sm uppercase mb-4 tracking-widest">Hành động Ưu tiên</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start">
+                            <span class="bg-accent-gold text-navy-900 font-bold px-2 py-0.5 rounded mr-3 text-xs">01</span>
+                            <span>Làm việc với Bộ TN&MT để có <strong>Thư chấp thuận (LoA)</strong> cho mục tiêu xuất khẩu tín chỉ.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-accent-gold text-navy-900 font-bold px-2 py-0.5 rounded mr-3 text-xs">02</span>
+                            <span>Tiếp cận các quỹ đầu tư mạo hiểm vì khí hậu (Climate Venture Funds) để tối ưu cấu trúc vốn CAPEX.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-accent-gold text-navy-900 font-bold px-2 py-0.5 rounded mr-3 text-xs">03</span>
+                            <span>Tích hợp công nghệ AI ngay từ đầu để giảm thiểu chi phí MRV dài hạn.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Sign-off -->
+        <div class="mt-16 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-start md:items-center">
+            <div class="mb-6 md:mb-0">
+                <p class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Đơn vị tư vấn</p>
+                <p class="font-display font-bold text-navy-800">TỔ CHUYÊN GIA AI TÍN CHỈ CARBON</p>
+                <p class="text-xs text-gray-500">Phân khúc: Chiến lược Carbon & Công nghệ Xanh</p>
+            </div>
+            <div class="text-left md:text-right text-xs text-gray-400 max-w-sm">
+                <p class="font-bold mb-2">MIỄN TRỪ TRÁCH NHIỆM</p>
+                <p>Các phân tích trên dựa trên dữ liệu giả định năm 2026. Kết quả thực tế phụ thuộc vào quá trình xác minh của bên thứ ba (Verra, Gold Standard) và biến động thị trường. Nhà đầu tư cần thực hiện thẩm định (Due Diligence) độc lập.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Spacing for visual -->
+    <div class="h-12"></div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
