@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tín Chỉ Carbon | Chuyên Gia Chiến Lược</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: '#1B4332',
+                        charcoal: '#2D3436',
+                        gold: '#D4AF37',
+                        emerald: '#2D6A4F',
+                        offwhite: '#F8F9FA',
+                    },
+                    fontFamily: {
+                        serif: ["'Times New Roman'", 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #F8F9FA;
+            color: #2D3436;
+            line-height: 1.6;
+        }
+        p, .justified-text {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        .premium-border {
+            border-left: 4px solid #1B4332;
+        }
+        .card-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-shadow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(27, 67, 50, 0.1);
+        }
+        .copy-area {
+            font-family: 'Times New Roman', serif;
+            resize: none;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+        }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #1B4332, transparent);
+            margin: 2rem 0;
+            opacity: 0.3;
+        }
+        .btn-premium {
+            background-color: #1B4332;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .btn-premium:hover {
+            background-color: #2D6A4F;
+            transform: scale(1.02);
+        }
+        @media (max-width: 640px) {
+            .justified-text {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Executive Header -->
+    <header class="w-full bg-white border-b border-gray-200 px-6 py-8 md:px-12 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 sticky top-0 z-50 shadow-sm">
+        <div class="text-center md:text-left">
+            <h1 class="text-3xl md:text-4xl font-bold text-forest tracking-tight uppercase">AI Tín Chỉ Carbon</h1>
+            <p class="text-sm text-gray-500 mt-1 italic">Nền tảng Phân tích & Quản trị Chiến lược Carbon</p>
+        </div>
+        <div class="text-center md:text-right border-t md:border-t-0 md:border-l border-gray-200 pt-4 md:pt-0 md:pl-8">
+            <p class="text-sm font-semibold text-charcoal" id="current-date"></p>
+            <a href="www.phamhoanganhtokens.com" target="_blank" class="text-emerald hover:text-gold transition-colors text-sm font-medium">www.phamhoanganhtokens.com</a>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        
+        <!-- Introduction Section -->
+        <section class="mb-20 text-center max-w-3xl mx-auto">
+            <span class="text-gold font-bold tracking-[0.2em] uppercase text-xs">Báo Cáo Chuyên Gia</span>
+            <h2 class="text-4xl font-bold text-charcoal mt-4 mb-6 leading-tight">Chào mừng đến với Hệ thống Phân tích AI Tín Chỉ Carbon</h2>
+            <p class="text-lg text-gray-700 italic">
+                Nền tảng tiên phong tích hợp trí tuệ nhân tạo vào lĩnh vực tài chính môi trường, cung cấp các giải pháp chiến lược, thẩm định kỹ thuật và tối ưu hóa giá trị tín chỉ carbon cho các dự án phát triển bền vững tại Việt Nam.
+            </p>
+        </section>
+
+        <!-- Demo Showcase Grid -->
+        <div class="mb-16">
+            <h3 class="text-2xl font-bold text-forest mb-10 border-b-2 border-forest inline-block pb-2 uppercase tracking-wide">Danh Mục Trình Diễn Các Dự Án Chiến Lược</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                
+                <!-- Project 1 -->
+                <article class="bg-white p-8 rounded-sm card-shadow premium-border flex flex-col h-full">
+                    <span class="text-emerald font-bold text-xs mb-2">01. LÂM NGHIỆP VÀ SỬ DỤNG ĐẤT (AFOLU)</span>
+                    <h4 class="text-xl font-bold mb-4 text-charcoal">Phục hồi Hệ sinh thái Rừng Đặc dụng và Làm giàu Trữ lượng Carbon Tây Nguyên</h4>
+                    <div class="flex-grow space-y-4">
+                        <p class="text-gray-700"><span class="font-bold text-forest">Mục tiêu:</span> Tái thiết lập 5.000 ha rừng tự nhiên, hấp thụ 1,5 triệu tấn CO2e trong 30 năm theo tiêu chuẩn VCS.</p>
+                        <div>
+                            <span class="font-bold text-forest block mb-1 underline">Chiến lược triển khai:</span>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700 ml-2">
+                                <li>Áp dụng kỹ thuật ANR với cây bản địa.</li>
+                                <li>Giám sát Remote Sensing & Drone thời gian thực.</li>
+                                <li>Mô hình Agroforestry tạo sinh kế cộng đồng.</li>
+                            </ul>
+                        </div>
+                        <p class="text-gray-600 italic border-t pt-4 border-gray-100">
+                            <span class="font-bold">Phân tích:</span> Khả thi cao với tính bổ sung rõ rệt, rủi ro cháy rừng cần quỹ dự phòng Buffer pool.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="bg-white p-8 rounded-sm card-shadow premium-border flex flex-col h-full">
+                    <span class="text-emerald font-bold text-xs mb-2">02. CARBON XANH (BLUE CARBON)</span>
+                    <h4 class="text-xl font-bold mb-4 text-charcoal">Liên minh Rừng ngập mặn Bán đảo Cà Mau: Bảo tồn & Lưu trữ Carbon</h4>
+                    <div class="flex-grow space-y-4">
+                        <p class="text-gray-700"><span class="font-bold text-forest">Mục tiêu:</span> Phục hồi 3.000 ha rừng ngập mặn, tối ưu hóa tiêu chuẩn Verra Blue Carbon.</p>
+                        <div>
+                            <span class="font-bold text-forest block mb-1 underline">Chiến lược triển khai:</span>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700 ml-2">
+                                <li>Nuôi tôm sinh thái Certified Organic Shrimp.</li>
+                                <li>Đo đạc Soil Organic Carbon (SOC) chuyên sâu.</li>
+                                <li>Xây dựng đê kè mềm tự nhiên ứng phó thiên tai.</li>
+                            </ul>
+                        </div>
+                        <p class="text-gray-600 italic border-t pt-4 border-gray-100">
+                            <span class="font-bold">Phân tích:</span> Giá trị tín chỉ cao gấp 2-3 lần thông thường nhờ lợi ích đa dạng sinh học kép.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="bg-white p-8 rounded-sm card-shadow premium-border flex flex-col h-full">
+                    <span class="text-emerald font-bold text-xs mb-2">03. QUẢN LÝ CHẤT THẢI (WASTE MANAGEMENT)</span>
+                    <h4 class="text-xl font-bold mb-4 text-charcoal">Thu hồi & Chuyển đổi Khí Metan tại Khu kinh tế phía Nam</h4>
+                    <div class="flex-grow space-y-4">
+                        <p class="text-gray-700"><span class="font-bold text-forest">Mục tiêu:</span> Cắt giảm khí Metan (GWP gấp 28 lần CO2) qua hệ thống thu gom khí bãi rác LFG.</p>
+                        <div>
+                            <span class="font-bold text-forest block mb-1 underline">Chiến lược triển khai:</span>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700 ml-2">
+                                <li>Lắp mạng lưới giếng thu và đuốc đốt kín Enclosed Flare.</li>
+                                <li>Phát điện khí sinh học cho vận hành nội bộ.</li>
+                                <li>Đăng ký theo cơ chế Gold Standard/CDM.</li>
+                            </ul>
+                        </div>
+                        <p class="text-gray-600 italic border-t pt-4 border-gray-100">
+                            <span class="font-bold">Phân tích:</span> Hiệu quả đo lường tức thì; rủi ro thay đổi chính sách từ chôn lấp sang đốt rác WTE.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="bg-white p-8 rounded-sm card-shadow premium-border flex flex-col h-full">
+                    <span class="text-emerald font-bold text-xs mb-2">04. NĂNG LƯỢNG TÁI TẠO (RENEWABLE ENERGY)</span>
+                    <h4 class="text-xl font-bold mb-4 text-charcoal">Điện gió ngoài khơi & Tín chỉ Năng lượng tái tạo (I-REC/T-REC)</h4>
+                    <div class="flex-grow space-y-4">
+                        <p class="text-gray-700"><span class="font-bold text-forest">Mục tiêu:</span> Phát triển tổ hợp 500MW, cung cấp EACs cho các tập đoàn đa quốc gia hướng tới Net Zero.</p>
+                        <div>
+                            <span class="font-bold text-forest block mb-1 underline">Chiến lược triển khai:</span>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700 ml-2">
+                                <li>Kết hợp cơ chế GCC và phát hành chứng chỉ I-REC.</li>
+                                <li>Ứng dụng AI dự báo sản lượng và tối ưu cắt giảm.</li>
+                                <li>Tập trung thị trường tự nguyện có tính thanh khoản cao.</li>
+                            </ul>
+                        </div>
+                        <p class="text-gray-600 italic border-t pt-4 border-gray-100">
+                            <span class="font-bold">Phân tích:</span> Phù hợp Quy hoạch điện VIII; thách thức về tiêu chuẩn Additionality quốc tế.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="bg-white p-8 rounded-sm card-shadow premium-border md:col-span-2 flex flex-col h-full">
+                    <span class="text-emerald font-bold text-xs mb-2">05. CỘNG ĐỒNG (COMMUNITY-BASED PROJECTS)</span>
+                    <h4 class="text-xl font-bold mb-4 text-charcoal">Bếp đun cải tiến & Nước sạch cho cộng đồng miền núi phía Bắc</h4>
+                    <div class="flex-grow space-y-4">
+                        <p class="text-gray-700"><span class="font-bold text-forest">Mục tiêu:</span> Phân phối 100.000 thiết bị tiết kiệm năng lượng, giảm khai thác củi rừng, đạt đa mục tiêu SDGs.</p>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <span class="font-bold text-forest block mb-1 underline">Chiến lược triển khai:</span>
+                                <ul class="list-disc list-inside space-y-1 text-gray-700 ml-2">
+                                    <li>Vốn từ bán trước tín chỉ (Forward Carbon Credits).</li>
+                                    <li>Ứng dụng IoT giám sát tần suất sử dụng thực tế.</li>
+                                    <li>Xây dựng mạng lưới kỹ thuật viên bảo trì tại chỗ.</li>
+                                </ul>
+                            </div>
+                            <p class="text-gray-600 italic pt-4 md:pt-0">
+                                <span class="font-bold">Phân tích chiến lược:</span> Đạt giá Premium Price nhờ tác động xã hội sâu sắc (SDG 3, 5, 13). Cần duy trì thói quen người dân thông qua đào tạo liên tục.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Featured "1-Click Copy" Zone -->
+        <section class="mt-20">
+            <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-6 space-y-4 md:space-y-0">
+                    <div>
+                        <h3 class="text-xl font-bold text-charcoal uppercase tracking-wider">Tổng Hợp Dữ Liệu Dự Án</h3>
+                        <p class="text-sm text-gray-500 italic">Dữ liệu sẵn sàng để sao chép cho báo cáo chuyên sâu</p>
+                    </div>
+                    <button id="copy-btn" class="btn-premium px-8 py-3 rounded text-sm font-bold uppercase tracking-widest flex items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+                        </svg>
+                        <span>Sao chép tất cả</span>
+                    </button>
+                </div>
+                
+                <textarea id="copy-text" readonly class="w-full h-80 p-6 copy-area text-sm text-gray-600 leading-relaxed focus:ring-1 focus:ring-forest outline-none">
+DANH MỤC TRÌNH DIỄN CÁC DỰ ÁN TÍN CHỈ CARBON CHIẾN LƯỢC
+
+1. DỰ ÁN LÂM NGHIỆP VÀ SỬ DỤNG ĐẤT (AFOLU)
+Tên dự án: Phục hồi Hệ sinh thái Rừng Đặc dụng và Làm giàu Trữ lượng Carbon Tây Nguyên.
+Mục tiêu chính: Tái thiết lập 5.000 ha rừng tự nhiên trên diện tích đất lâm nghiệp bị suy thoái, hướng tới mục tiêu hấp thụ khoảng 1,5 triệu tấn CO2e trong vòng 30 năm và đạt chứng nhận theo tiêu chuẩn VCS (Verified Carbon Standard).
+Chiến lược triển khai:
+- Kỹ thuật: Áp dụng phương pháp tái sinh tự nhiên có hỗ trợ (ANR) bằng các loài cây bản địa có khả năng sinh trưởng mạnh và trữ lượng carbon cao. 
+- Quản lý: Thiết lập hệ thống giám sát thời gian thực bằng công nghệ viễn thám (Remote Sensing) và drone để theo dõi mật độ che phủ.
+- Cộng đồng: Giao khoán bảo vệ rừng cho hộ gia đình địa phương, tạo sinh kế bền vững thông qua mô hình nông lâm kết hợp (Agroforestry) dưới tán rừng.
+Phân tích tính khả thi chiến lược và rủi ro:
+- Tính khả thi: Phù hợp với Chiến lược quốc gia về biến đổi khí hậu; tiềm năng tích lũy carbon của rừng nhiệt đới rất lớn, đảm bảo tính bổ sung (Additionality) rõ rệt.
+- Rủi ro: Cháy rừng và xâm lấn đất đai là rủi ro trọng yếu. Cần thiết lập quỹ dự phòng tín chỉ (Buffer pool) và thắt chặt hành lang pháp lý về quyền sử dụng đất.
+
+2. DỰ ÁN CARBON XANH (BLUE CARBON)
+Tên dự án: Liên minh Rừng ngập mặn Bán đảo Cà Mau: Bảo tồn Đa dạng sinh học và Lưu trữ Carbon.
+Mục tiêu chính: Bảo tồn và phục hồi 3.000 ha rừng ngập mặn ven biển, tạo ra tín chỉ carbon xanh chất lượng cao, đồng thời tăng cường khả năng chống chịu nước biển dâng.
+Chiến lược triển khai:
+- Mô hình: Kết hợp bảo tồn nghiêm ngặt với nuôi tôm sinh thái dưới tán rừng (Certified Organic Shrimp). 
+- Khoa học: Sử dụng các phương pháp đo đạc carbon trong đất (Soil Organic Carbon - SOC).
+- Tiêu chuẩn: Định hướng theo tiêu chuẩn Verra Blue Carbon để tối ưu hóa giá trị thương mại của tín chỉ trên thị trường quốc tế.
+Phân tích tính khả thi chiến lược và rủi ro:
+- Tính khả thi: Tín chỉ carbon xanh thường có giá trị cao gấp 2-3 lần tín chỉ từ rừng trên cạn do đi kèm lợi ích kép về đa dạng sinh học.
+- Rủi ro: Biến đổi khí hậu cực đoan (bão lớn, sạt lở bờ biển) có thể làm mất diện tích rừng. Chiến lược ứng phó yêu cầu xây dựng đê kè mềm tự nhiên để bảo vệ vùng lõi.
+
+3. DỰ ÁN QUẢN LÝ CHẤT THẢI (WASTE MANAGEMENT)
+Tên dự án: Thu hồi và Chuyển đổi Khí Metan từ các Bãi chôn lấp tập trung tại Khu kinh tế trọng điểm phía Nam.
+Mục tiêu chính: Lắp đặt hệ thống thu gom khí bãi rác (LFG) để tiêu hủy hoặc phát điện, cắt giảm phát thải khí Metan (CH4).
+Chiến lược triển khai:
+- Công nghệ: Lắp đặt mạng lưới giếng thu khí kín và hệ thống đuốc đốt kín (Enclosed Flare) đạt hiệu suất 98%.
+- Năng lượng: Tích hợp máy phát điện khí sinh học để cung cấp điện năng cho vận hành nội bộ hoặc bán lên lưới điện quốc gia.
+- Chứng nhận: Đăng ký theo Cơ chế Phát triển Sạch (CDM) hoặc Gold Standard.
+Phân tích tính khả thi chiến lược và rủi ro:
+- Tính khả thi: Hiệu quả giảm phát thải tức thì và có thể đo lường chính xác bằng lưu lượng kế.
+- Rủi ro: Sự thay đổi trong chính sách quản lý chất thải (chuyển từ chôn lấp sang đốt rác phát điện WTE) có thể làm giảm nguồn cấp khí ổn định lâu dài.
+
+4. DỰ ÁN NĂNG LƯỢNG TÁI TẠO (RENEWABLE ENERGY)
+Tên dự án: Phát triển Điện gió ngoài khơi và Tín chỉ năng lượng tái tạo (I-REC/T-REC).
+Mục tiêu chính: Thay thế sản lượng điện từ nhiên liệu hóa thạch bằng năng lượng sạch, góp phần thực hiện cam kết Net Zero vào năm 2050 của Chính phủ Việt Nam.
+Chiến lược triển khai:
+- Quy mô: Đầu tư tổ hợp điện gió công suất 500MW tại các vùng có tiềm năng gió cao.
+- Thị trường: Kết hợp bán tín chỉ Carbon theo cơ chế GCC (Global Carbon Council) và phát hành Chứng chỉ Thuộc tính Năng lượng (EACs) như I-REC.
+- Vận hành: Sử dụng hệ thống AI để dự báo sản lượng và tối ưu hóa hiệu suất cắt giảm phát thải.
+Phân tích tính khả thi chiến lược và rủi ro:
+- Tính khả thi: Phù hợp với Quy hoạch điện VIII. Đây là phân khúc có tính thanh khoản cao nhất trên thị trường tự nguyện.
+- Rủi ro: Rào cản về chính sách đấu nối lưới điện và sự thay đổi của các tiêu chuẩn quốc tế về tính "bổ sung".
+
+5. DỰ ÁN CỘNG ĐỒNG (COMMUNITY-BASED PROJECTS)
+Tên dự án: Giải pháp Bếp đun cải tiến và Nước sạch cho cộng đồng thiểu số miền núi phía Bắc.
+Mục tiêu chính: Phân phối 100.000 thiết bị bếp đun tiết kiệm năng lượng và hệ thống lọc nước hộ gia đình nhằm giảm việc khai thác củi rừng.
+Chiến lược triển khai:
+- Phương thức: Cung cấp miễn phí hoặc trợ giá thiết bị thông qua nguồn vốn từ bán trước tín chỉ carbon (Forward Carbon Credits).
+- Giám sát: Ứng dụng IoT vào một số mẫu thiết bị để kiểm chứng tần suất sử dụng thực tế.
+- Giá trị cộng hưởng: Tập trung vào các mục tiêu phát triển bền vững (SDGs) như Sức khỏe (SDG 3), Giới (SDG 5) và Hành động khí hậu (SDG 13).
+Phân tích tính khả thi chiến lược và rủi ro:
+- Tính khả thi: Tín chỉ từ dự án cộng đồng thường nhận được "Premium price" nhờ tác động xã hội sâu sắc.
+- Rủi ro: Khó khăn trong việc duy trì thói quen sử dụng của người dân sau khi kết thúc hỗ trợ.
+                </textarea>
+            </div>
+        </section>
+
+        <!-- Call-to-Action Footer Area -->
+        <section class="mt-24 mb-12 bg-charcoal text-white p-12 md:p-20 text-center rounded-sm">
+            <h2 class="text-3xl font-bold mb-6">Sẵn sàng phân tích dự án của bạn?</h2>
+            <p class="max-w-2xl mx-auto mb-10 text-gray-300 italic">
+                Hãy để các chuyên gia AI và kỹ sư môi trường của chúng tôi hỗ trợ bạn tối ưu hóa tiềm năng carbon, xây dựng báo cáo kỹ thuật chuyên sâu và kết nối với thị trường tài chính khí hậu toàn cầu.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="www.phamhoanganhtokens.com" target="_blank" class="bg-gold text-charcoal px-10 py-4 font-bold uppercase tracking-widest hover:bg-white transition-all w-full sm:w-auto">Liên hệ ngay</a>
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="border border-gray-500 text-gray-300 px-10 py-4 font-bold uppercase tracking-widest hover:border-white hover:text-white transition-all w-full sm:w-auto">Quay lại đầu trang</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Set current date
+        const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('vi-VN', dateOptions);
+
+        // Copy functionality
+        const copyBtn = document.getElementById('copy-btn');
+        const copyText = document.getElementById('copy-text');
+
+        copyBtn.addEventListener('click', () => {
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile
+            
+            try {
+                navigator.clipboard.writeText(copyText.value);
+                const originalText = copyBtn.innerHTML;
+                copyBtn.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Đã sao chép!</span>
+                `;
+                copyBtn.style.backgroundColor = '#2D6A4F';
+                
+                setTimeout(() => {
+                    copyBtn.innerHTML = originalText;
+                    copyBtn.style.backgroundColor = '';
+                }, 2000);
+            } catch (err) {
+                console.error('Không thể sao chép: ', err);
+            }
+        });
+    </script>
+</body>
+</html>
